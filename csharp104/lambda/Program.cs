@@ -8,6 +8,12 @@ int doubledNum = doubleFunc(num);
 
 // Print the results
 Console.WriteLine($"The double of {num} is {doubledNum}.");
+Func<int, decimal> halfANumber = x => (decimal)x / 2;
+int num1 = 11;
+decimal halfedNumb = halfANumber(num1);
+System.Console.WriteLine($"halfed number is {halfedNumb} and number is {num1}");
+#region lambda for sort
+int[] numbers = { 5, 2, 8, 1, 9, 4 };
 #endregion
 
 #region lambda for sort
@@ -20,7 +26,7 @@ Array.Sort(numbers, (x, y) => x.CompareTo(y));
 Console.WriteLine("Sorted array:");
 foreach (int number in numbers)
 {
-  Console.WriteLine(number);
+    Console.WriteLine(number);
 }
 #endregion
 
