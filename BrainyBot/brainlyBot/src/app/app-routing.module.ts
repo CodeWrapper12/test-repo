@@ -1,0 +1,19 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './components/home/home.component';
+import { ChatComponent } from './components/chat/chat.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'botchat', component: ChatComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
+
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }

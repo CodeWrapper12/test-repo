@@ -1,0 +1,115 @@
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.sender-message {
+    align-self: flex-end;
+    background-color: #dddddd;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.receiver-message {
+    align-self: flex-start;
+    background-color: #e6e6e6;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.input-container {
+    display: flex;
+    background-color: #333333;
+    padding: 10px;
+    align-items: center;
+    color: #ffffff;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+}
+
+input[type="text"] {
+    background-color: #ffffff;
+    color: #333333;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    flex: 1;
+}
+
+button {
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-left: 10px;
+}
+
+#input {
+    position: fixed;
+    bottom: 0%;
+}
+
+.spinner {
+    /* margin: auto; */
+    width: 80px;
+    height: 18px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.spinner>div {
+    background-color: #333;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+
+    -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+    animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .dot2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+
+    0%,
+    40%,
+    100% {
+        -webkit-transform: scaleY(0.4)
+    }
+
+    20% {
+        -webkit-transform: scaleY(1.0)
+    }
+}
+
+@keyframes sk-stretchdelay {
+
+    0%,
+    40%,
+    100% {
+        transform: scaleY(0.4);
+        -webkit-transform: scaleY(0.4);
+    }
+
+    20% {
+        transform: scaleY(1.0);
+        -webkit-transform: scaleY(1.0);
+    }
+}

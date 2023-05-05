@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+<div class="chat-container">
+    <div class="message-container">
+        <div class="receiver-message">
+            <p>Hello! I am BrainlyBOT, powered by the OpenAI ChatGPT API. I am here to help you with all your questions
+                related to
+                academics. Whether you're struggling with a difficult math problem or need help with your history
+                homework, I am here to
+                provide you with accurate and quick answers. Just type in your question, and I'll do my best to assist
+                you. Let's get
+                started!</p>
+        </div>
+    </div>
+    <ng-container *ngIf="myArray[0]!=null">
+        <div class="message-container" *ngFor="let item of myArray">
+            <ng-container>
+                <div class="sender-message">
+                    <p>{{item.userMessage}}</p>
+                </div>
+            </ng-container>
+            <ng-container>
+                <div class="receiver-message">
+                    <p>{{item.response}}</p>
+                </div>
+            </ng-container>
+        </div>
+    </ng-container>
+    <div class="message-container">
+        <ng-container *ngIf="userMessage!=null">
+            <div class="sender-message">
+                <p>{{userMessage}}</p>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="loading">
+            <div class="receiver-message">
+                <div class="spinner">
+                    <div class="dot1"></div>
+                    <div class="dot2"></div>
+                </div>
+
+            </div>
+        </ng-container>
+    </div>
+    <div class="input-container" id="input">
+        <input [disabled]=this.loading type="text" placeholder="Type your message here..." [(ngModel)]="userMessage"
+            (keyup.enter)="sendMessage()">
+        <button (click)="sendMessage()" [disabled]=this.loading>Send</button>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<ng-container *ngIf=view>
+    <div class="navbar" fxLayout="row" fxFlexAlign="end">
+        <div class="message" fxLayout fxLayoutAlign="center center">
+            <p>please Enter "space" to start</p>
+        </div>
+        <img src="../assets/icons/brandIcon.png" alt="" class="icon">
+        <h1 class="brandName"> BrainlyBOT</h1>
+        <!-- <button (click)="transform()">enterMe</button> -->
+    </div>
+</ng-container>
+<ng-container *ngIf=!view>
+    <div class="main">
+        <app-navbar></app-navbar>
+        <div class="content" fxLayout="row" fxLayout.lt-md="column">
+            <div class="leftContent" fxLayout="column" fxLayoutAlign="start center" fxFlexOrder.lt-md="2">
+                <div class="title">
+                    <h1 fxFlex>BrainlyBOT:Optimizing Language Models for Dialogue</h1>
+                </div>
+                <div class="title1">
+                    <p>Introducing BrainlyBOT, powered by the advanced OpenAI GPT-3 language model. With BrainlyBOT, you
+                        can have seamless and
+                        intuitive conversations on any topic, just like talking to a knowledgeable and witty friend. Our
+                        AI
+                        technology ensures
+                        that every interaction is unique and personalized, adapting to your communication style over
+                        time.
+                        <!-- Whether you need
+                        information, support, or just a chat, BrainlyBOT is here to provide the perfect conversation
+                        partner. Start your
+                        conversation now and experience the power of GPT-3 language technology.</p> -->
+                </div>
+                <div class="chat" fxLayout="row" fxLayoutAlign="start center">
+                    <button routerLink="/botchat">TRY BrainlyBOT &#8599;</button>
+                </div>
+            </div>
+            <div class=" rightContent" fxLayout fxLayoutAlign="start" fxFlexOrder.lt-md="1">
+                <img src="../assets/icons/brandIcon.png" alt="">
+            </div>
+        </div>
+    </div>
+</ng-container>
